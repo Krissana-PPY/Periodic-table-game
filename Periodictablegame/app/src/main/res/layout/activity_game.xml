@@ -7,4 +7,27 @@
     android:background="@drawable/background"
     tools:context=".Game">
 
+    <Button
+        android:id="@+id/guessPictureButton"
+        android:layout_width="247dp"
+        android:layout_height="94dp"
+        android:background="@drawable/button_game_guess_picture"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.372" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="81dp"
+        android:layout_height="56dp"
+        android:background="@drawable/button_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.056" />
 </android.support.constraint.ConstraintLayout>
