@@ -25,5 +25,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(game);
             }
         });
+
+        periodicTableButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent periodicTable = new Intent(getApplicationContext(), PeriodicTable.class);
+                startActivity(periodicTable);
+            }
+        });
     }
 }
