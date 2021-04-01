@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Periodic table game</string>
+    <string-array name="show">
+        <item>Initials</item>
+        <item>Atomic number</item>
+        <item>Weight</item>
+    </string-array>
 </resources>
