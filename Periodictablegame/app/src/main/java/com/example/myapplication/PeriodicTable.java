@@ -14,20 +14,20 @@ public class PeriodicTable extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_periodictable);
-        selectButton = (Button) findViewById(R.id.select_show_button);
-        selectButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openShowDialog();
-            }
-        });
-        detailsButton = (Button) findViewById(R.id.details_button);
-        detailsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openDetailsDialog();
-            }
-        });
+//        selectButton = (Button) findViewById(R.id.select_show_button);
+//        selectButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                openShowDialog();
+//            }
+//        });
+//        detailsButton = (Button) findViewById(R.id.details_button);
+//        detailsButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                openDetailsDialog();
+//            }
+//        });
     }
     public void openShowDialog() {
         SelectShowDialog selectShow = new SelectShowDialog();

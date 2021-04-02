@@ -8,17 +8,17 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button periodicTableButton, gameButton;
+    Button periodicTable_Button, game_Button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        periodicTableButton = findViewById(R.id.periodicTableButton);
-        gameButton = findViewById(R.id.gameButton);
+        periodicTable_Button = findViewById(R.id.periodicTableButton);
+        game_Button = findViewById(R.id.gameButton);
 
-        gameButton.setOnClickListener(new View.OnClickListener() {
+        game_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent game = new Intent(getApplicationContext(), Game.class);
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        periodicTableButton.setOnClickListener(new View.OnClickListener() {
+        periodicTable_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent periodicTable = new Intent(getApplicationContext(), PeriodicTable.class);

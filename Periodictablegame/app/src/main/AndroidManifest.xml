@@ -10,8 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity android:name=".GuessPicture"></activity>
-        <activity android:name=".PeriodicTable"/>
         <activity android:name=".Game" />
+        <activity android:name=".PeriodicTable"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
