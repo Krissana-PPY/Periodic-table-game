@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button periodicTable_Button, game_Button;
+    protected Button periodicTable_Button, game_Button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

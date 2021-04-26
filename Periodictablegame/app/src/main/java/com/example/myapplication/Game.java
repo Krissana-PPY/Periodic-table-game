@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class Game extends AppCompatActivity {
 
-    Button guessPictureButton, back_gameButton;
+    protected Button guessPictureButton, back_gameButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
