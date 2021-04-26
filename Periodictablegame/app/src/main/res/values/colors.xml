@@ -13,8 +13,8 @@
     <color name="post_transition_color">#3366FF</color>
     <color name="metalloid_color">#00CC99</color>
     <color name="nonmetal_color">#66FF33</color>
-    <color name="noble_gas_color">#9900CC</color>
-    <color name="lanthanoids_color">#663333</color>
+    <color name="noble_gas_color">#CC66FF</color>
+    <color name="lanthanoids_color">#CC9900</color>
     <color name="actinide_color">#CC3399</color>
 
 </resources>
