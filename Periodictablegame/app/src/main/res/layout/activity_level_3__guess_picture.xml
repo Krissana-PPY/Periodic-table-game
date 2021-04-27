@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:layout_gravity="center_horizontal"
     android:background="@drawable/background"
-    tools:context=".Level_1_GuessPicture" >
+    tools:context=".Level_3_GuessPicture" >
 
     <LinearLayout
         android:orientation="vertical"
@@ -58,4 +58,3 @@
         android:layout_height="wrap_content" />
 
 </RelativeLayout>
-

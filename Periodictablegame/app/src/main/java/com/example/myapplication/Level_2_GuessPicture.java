@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.myapplication.Adapter.GridViewAnswerAdapter;
-import com.example.myapplication.Adapter.GridViewSuggestAdapterL1;
+import com.example.myapplication.Adapter.GridViewSuggestAdapterL2;
 import com.example.myapplication.common.Common;
 
 import java.util.ArrayList;
@@ -17,12 +17,12 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-public class Level_1_GuessPicture extends AppCompatActivity {
+public class Level_2_GuessPicture extends AppCompatActivity {
 
     public List<String> suggestSource = new ArrayList<>();
 
     public GridViewAnswerAdapter answerAdapter;
-    public GridViewSuggestAdapterL1 suggestAdapter;
+    public GridViewSuggestAdapterL2 suggestAdapter;
 
     public Button btnSubmit;
 
@@ -31,19 +31,7 @@ public class Level_1_GuessPicture extends AppCompatActivity {
     public ImageView imgViewQuestion;
 
     int[] image_list = {
-      R.drawable.hydrogen, R.drawable.barium, R.drawable.silicon, R.drawable.bismuth,
-      R.drawable.lithium, R.drawable.beryllium, R.drawable.antimony, R.drawable.gallium,
-      R.drawable.caesium, R.drawable.calcium, R.drawable.arsenic, R.drawable.lead,
-      R.drawable.francium, R.drawable.magnesium, R.drawable.astatine, R.drawable.polonium,
-      R.drawable.sodium, R.drawable.radium, R.drawable.boron, R.drawable.thallium,
-      R.drawable.potassium, R.drawable.strontium, R.drawable.germanium, R.drawable.tin,
-      R.drawable.rubidium, R.drawable.tellurium, R.drawable.aluminum, R.drawable.indium,
-      R.drawable.bromine, R.drawable.chlorine, R.drawable.fluorine, R.drawable.iodine,
-      R.drawable.nitrogen, R.drawable.oxygen, R.drawable.phosphorus, R.drawable.selenium,
-      R.drawable.carbon, R.drawable.sulfur, R.drawable.helium, R.drawable.krypton, R.drawable.neon,
-      R.drawable.xenon, R.drawable.radon, R.drawable.argon, R.drawable.flerovium,
-      R.drawable.livermorium, R.drawable.moscovium, R.drawable.nihonium, R.drawable.oganesson,
-      R.drawable.tennessine
+        R.drawable.copernicium
     };
 
     public char[] answer;
@@ -53,7 +41,7 @@ public class Level_1_GuessPicture extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_level_1__guess_picture);
+        setContentView(R.layout.activity_level_2__guess_picture);
 
         //Init View
         initView();
@@ -89,16 +77,16 @@ public class Level_1_GuessPicture extends AppCompatActivity {
                         gridViewAnswer.setAdapter(answerAdapter);
                         answerAdapter.notifyDataSetChanged();
 
-                        GridViewSuggestAdapterL1 suggestAdapter = new GridViewSuggestAdapterL1
+                        GridViewSuggestAdapterL2 suggestAdapter = new GridViewSuggestAdapterL2
                                 (suggestSource,getApplicationContext(),
-                                Level_1_GuessPicture.this);
+                                        Level_2_GuessPicture.this);
                         gridViewSuggest.setAdapter(suggestAdapter);
                         suggestAdapter.notifyDataSetChanged();
 
                         setupList();
                     }
                     else  {
-                        Toast.makeText(Level_1_GuessPicture.this, "Incorrect!!!",
+                        Toast.makeText(Level_2_GuessPicture.this, "Incorrect!!!",
                                 Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -135,7 +123,7 @@ public class Level_1_GuessPicture extends AppCompatActivity {
 
         //Set for GridView
         answerAdapter = new GridViewAnswerAdapter(setupNullList(), this);
-        suggestAdapter = new GridViewSuggestAdapterL1
+        suggestAdapter = new GridViewSuggestAdapterL2
                 (suggestSource, this, this);
 
         answerAdapter.notifyDataSetChanged();

@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".Level_1_GuessPicture"></activity>
+        <activity android:name=".Level_3_GuessPicture"></activity>
+        <activity android:name=".Level_2_GuessPicture" />
+        <activity android:name=".Level_1_GuessPicture" />
         <activity android:name=".LevelGuessPicture" />
         <activity android:name=".Game" />
         <activity android:name=".PeriodicTable" />
