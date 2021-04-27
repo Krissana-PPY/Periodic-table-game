@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="purple_200">#FFBB8F6C</color>
-    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_500">#CC66FF</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
@@ -10,7 +10,7 @@
     <color name="brown">#CC9966</color>
     <color name="light_brown">#FFCC99</color>
     <color name="transition_color">#CC3333</color>
-    <color name="post_transition_color">#3366FF</color>
+    <color name="post_transition_color">#33CCFF</color>
     <color name="metalloid_color">#00CC99</color>
     <color name="nonmetal_color">#66FF33</color>
     <color name="noble_gas_color">#CC66FF</color>
