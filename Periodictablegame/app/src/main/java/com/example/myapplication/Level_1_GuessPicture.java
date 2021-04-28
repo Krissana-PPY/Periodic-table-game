@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,7 +25,7 @@ public class Level_1_GuessPicture extends AppCompatActivity {
     public GridViewAnswerAdapter answerAdapter;
     public GridViewSuggestAdapterL1 suggestAdapter;
 
-    public Button btnSubmit;
+    public Button btnSubmit, back_gameButton;
 
     public GridView gridViewAnswer, gridViewSuggest;
 
@@ -57,6 +58,16 @@ public class Level_1_GuessPicture extends AppCompatActivity {
 
         //Init View
         initView();
+
+        back_gameButton = findViewById(R.id.back_gameButton);
+
+        back_gameButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent back = new Intent(getApplicationContext(), LevelGuessPicture.class);
+                startActivity(back);
+            }
+        });
     }
 
     protected void initView() {

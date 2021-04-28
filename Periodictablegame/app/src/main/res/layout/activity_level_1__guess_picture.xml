@@ -15,8 +15,14 @@
         android:layout_gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btnSubmit"
-        >
+        android:layout_above="@+id/btnSubmit" >
+
+        <Button
+            android:id="@+id/back_gameButton"
+            android:layout_width="81dp"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/button_back" />
 
         <ImageView
             android:id="@+id/imgVIIIA"
@@ -52,10 +58,13 @@
 
     <Button
         android:id="@+id/btnSubmit"
-        android:text="Submit"
-        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button"
+        android:text="Submit" />
 
 </RelativeLayout>
+
+
 

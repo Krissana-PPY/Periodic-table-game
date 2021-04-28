@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,14 +25,21 @@ public class Level_3_GuessPicture extends AppCompatActivity {
     public GridViewAnswerAdapter answerAdapter;
     public GridViewSuggestAdapterL3 suggestAdapter;
 
-    public Button btnSubmit;
+    public Button btnSubmit, back_gameButton;
 
     public GridView gridViewAnswer, gridViewSuggest;
 
     public ImageView imgViewQuestion;
 
     int[] image_list = {
-            R.drawable.actinium
+            R.drawable.actinium, R.drawable.americium, R.drawable.mendelevium, R.drawable.protactinium,
+            R.drawable.berkelium, R.drawable.einsteinium, R.drawable.neptunium, R.drawable.thorium,
+            R.drawable.californium, R.drawable.fermium, R.drawable.nobelium, R.drawable.uranium,
+            R.drawable.curium, R.drawable.lawrencium, R.drawable.plutonium, R.drawable.cerium,
+            R.drawable.samarium, R.drawable.lutetium, R.drawable.gadolinium, R.drawable.dysprosium,
+            R.drawable.terbium, R.drawable.neodymium, R.drawable.holmium, R.drawable.erbium,
+            R.drawable.thulium, R.drawable.praseodymium, R.drawable.lanthanum, R.drawable.europium,
+            R.drawable.ytterbium, R.drawable.promethium
     };
 
     public char[] answer;
@@ -45,6 +53,16 @@ public class Level_3_GuessPicture extends AppCompatActivity {
 
         //Init View
         initView();
+
+        back_gameButton = findViewById(R.id.back_gameButton);
+
+        back_gameButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent back = new Intent(getApplicationContext(), LevelGuessPicture.class);
+                startActivity(back);
+            }
+        });
     }
 
     protected void initView() {
