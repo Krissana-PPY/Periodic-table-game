@@ -3,7 +3,9 @@ Member contribution:
                       Thanawat Thongnoi ==> develop periodic table and feature for 2 month:
                       Krissana Pumpayom ==> Develop game Guess from the picture for 2 month:
 
-The best features of the game: 
+The best features of the game: Periodic table caan see information and have detail
+                               game have different 3 level can play
+                              
 
 
 The features that you would like to improve:
