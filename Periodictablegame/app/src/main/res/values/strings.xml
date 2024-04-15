@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Periodic table game</string>
+    <string name="logo">logo</string>
+    <string name="nameapp">nameApp</string>
     <string-array name="show">
         <item>Initials</item>
         <item>Atomic number</item>

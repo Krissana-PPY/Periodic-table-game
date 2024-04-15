@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="31304e40-40ee-463e-9e3d-cc1a9b68a446" name="Changes" comment="delete bar and Text switch to keypad">
+      <change afterPath="$PROJECT_DIR$/Periodictablegame/.idea/deploymentTargetDropDown.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Periodictablegame/.idea/migrations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Periodictablegame/app/src/main/res/drawable/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Periodictablegame/app/src/main/res/drawable/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Periodictablegame/app/src/main/res/layout-land/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Periodictablegame/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Periodictablegame/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Periodictablegame/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Periodictablegame/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Periodictablegame/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Periodictablegame/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Periodictablegame/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Periodictablegame/app/src/main/res/layout-land/activity_periodictable.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Periodictablegame/app/src/main/res/layout-land/activity_periodictable.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Periodictablegame/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Periodictablegame/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Periodictablegame/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Periodictablegame/app/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2f7BlmvTDOVUyK2KJLXZiihyjTt" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/Periodic-table-game/Periodictablegame"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="31304e40-40ee-463e-9e3d-cc1a9b68a446" name="Changes" comment="" />
+      <created>1713142388887</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713142388887</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="delete bar and Text switch to keypad" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete bar and Text switch to keypad" />
+  </component>
+</project>
