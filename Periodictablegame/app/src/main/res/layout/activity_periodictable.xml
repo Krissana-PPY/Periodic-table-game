@@ -1,19 +1,302 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PeriodicTable">
+    android:background="@drawable/background_periodic">
 
+    <!-- Zoomable container -->
+    <com.example.myapplication.ZoomableScrollView
+        android:id="@+id/zoom_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <!-- Periodic Table Grid (18 columns Ã— 10 rows for main table + 2 rows lanthanide/actinide) -->
+        <!-- Each cell = 56dp wide, 56dp tall, total = 18Ã—56 = 1008dp wide, 10Ã—56 = 560dp tall -->
+        <LinearLayout
+            android:id="@+id/periodic_table_grid"
+            android:layout_width="1050dp"
+            android:layout_height="630dp"
+            android:orientation="vertical"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp">
+
+            <!-- Row 1: H ... He -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView android:id="@+id/elem_1"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"   android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="H" />
+                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="16" />
+                <ImageView android:id="@+id/elem_2"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"     android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="He" />
+            </LinearLayout>
+
+            <!-- Row 2: Li Be ... B C N O F Ne -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView android:id="@+id/elem_3"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Li" />
+                <ImageView android:id="@+id/elem_4"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"  android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Be" />
+                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="10" />
+                <ImageView android:id="@+id/elem_5"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"      android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="B" />
+                <ImageView android:id="@+id/elem_6"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"     android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="C" />
+                <ImageView android:id="@+id/elem_7"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"   android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="N" />
+                <ImageView android:id="@+id/elem_8"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"     android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="O" />
+                <ImageView android:id="@+id/elem_9"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"   android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="F" />
+                <ImageView android:id="@+id/elem_10" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"       android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Ne" />
+            </LinearLayout>
+
+            <!-- Row 3: Na Mg ... Al Si P S Cl Ar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView android:id="@+id/elem_11" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"     android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Na" />
+                <ImageView android:id="@+id/elem_12" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"  android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Mg" />
+                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="10" />
+                <ImageView android:id="@+id/elem_13" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"   android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Al" />
+                <ImageView android:id="@+id/elem_14" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Si" />
+                <ImageView android:id="@+id/elem_15" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="P" />
+                <ImageView android:id="@+id/elem_16" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"     android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="S" />
+                <ImageView android:id="@+id/elem_17" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"   android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Cl" />
+                <ImageView android:id="@+id/elem_18" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"      android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Ar" />
+            </LinearLayout>
+
+            <!-- Row 4: K Ca Sc..Zn Ga Ge As Se Br Kr -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView android:id="@+id/elem_19" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"  android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="K" />
+                <ImageView android:id="@+id/elem_20" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Ca" />
+                <ImageView android:id="@+id/elem_21" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"   android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Sc" />
+                <ImageView android:id="@+id/elem_22" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"   android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Ti" />
+                <ImageView android:id="@+id/elem_23" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"   android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="V" />
+                <ImageView android:id="@+id/elem_24" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"   android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Cr" />
+                <ImageView android:id="@+id/elem_25" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"  android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Mn" />
+                <ImageView android:id="@+id/elem_26" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"       android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Fe" />
+                <ImageView android:id="@+id/elem_27" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"     android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Co" />
+                <ImageView android:id="@+id/elem_28" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"     android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Ni" />
+                <ImageView android:id="@+id/elem_29" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"     android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Cu" />
+                <ImageView android:id="@+id/elem_30" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"       android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Zn" />
+                <ImageView android:id="@+id/elem_31" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Ga" />
+                <ImageView android:id="@+id/elem_32" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"  android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Ge" />
+                <ImageView android:id="@+id/elem_33" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="As" />
+                <ImageView android:id="@+id/elem_34" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"   android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Se" />
+                <ImageView android:id="@+id/elem_35" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Br" />
+                <ImageView android:id="@+id/elem_36" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Kr" />
+            </LinearLayout>
+
+            <!-- Row 5: Rb Sr Y..Cd In Sn Sb Te I Xe -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView android:id="@+id/elem_37" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"   android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Rb" />
+                <ImageView android:id="@+id/elem_38" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"  android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Sr" />
+                <ImageView android:id="@+id/elem_39" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Y" />
+                <ImageView android:id="@+id/elem_40" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"  android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Zr" />
+                <ImageView android:id="@+id/elem_41" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Nb" />
+                <ImageView android:id="@+id/elem_42" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Mo" />
+                <ImageView android:id="@+id/elem_43" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Tc" />
+                <ImageView android:id="@+id/elem_44" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"  android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Ru" />
+                <ImageView android:id="@+id/elem_45" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Rh" />
+                <ImageView android:id="@+id/elem_46" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"  android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Pd" />
+                <ImageView android:id="@+id/elem_47" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"     android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Ag" />
+                <ImageView android:id="@+id/elem_48" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Cd" />
+                <ImageView android:id="@+id/elem_49" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"     android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="In" />
+                <ImageView android:id="@+id/elem_50" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"        android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Sn" />
+                <ImageView android:id="@+id/elem_51" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"   android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Sb" />
+                <ImageView android:id="@+id/elem_52" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"  android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Te" />
+                <ImageView android:id="@+id/elem_53" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"     android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="I" />
+                <ImageView android:id="@+id/elem_54" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"      android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Xe" />
+            </LinearLayout>
+
+            <!-- Row 6: Cs Ba [57-71] Hf Ta W Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView android:id="@+id/elem_55" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Cs" />
+                <ImageView android:id="@+id/elem_56" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"     android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Ba" />
+                <!-- Lanthanide placeholder -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="57-71"
+                    android:gravity="center"
+                    android:textSize="8sp"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/lanthanoid_background" />
+                <ImageView android:id="@+id/elem_72" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Hf" />
+                <ImageView android:id="@+id/elem_73" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"   android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Ta" />
+                <ImageView android:id="@+id/elem_74" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"   android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="W" />
+                <ImageView android:id="@+id/elem_75" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Re" />
+                <ImageView android:id="@+id/elem_76" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"     android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Os" />
+                <ImageView android:id="@+id/elem_77" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Ir" />
+                <ImageView android:id="@+id/elem_78" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"   android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Pt" />
+                <ImageView android:id="@+id/elem_79" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"       android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Au" />
+                <ImageView android:id="@+id/elem_80" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Hg" />
+                <ImageView android:id="@+id/elem_81" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"   android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Tl" />
+                <ImageView android:id="@+id/elem_82" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"       android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Pb" />
+                <ImageView android:id="@+id/elem_83" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Bi" />
+                <ImageView android:id="@+id/elem_84" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"   android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Po" />
+                <ImageView android:id="@+id/elem_85" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"   android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="At" />
+                <ImageView android:id="@+id/elem_86" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"      android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Rn" />
+            </LinearLayout>
+
+            <!-- Row 7: Fr Ra [89-103] Rf Db Sg Bh Hs Mt Ds Rg Cn Nh Fl Mc Lv Ts Og -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView android:id="@+id/elem_87"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"      android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Fr" />
+                <ImageView android:id="@+id/elem_88"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"        android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Ra" />
+                <!-- Actinide placeholder -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="89-103"
+                    android:gravity="center"
+                    android:textSize="8sp"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/actinide_background" />
+                <ImageView android:id="@+id/elem_104" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Rf" />
+                <ImageView android:id="@+id/elem_105" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"       android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Db" />
+                <ImageView android:id="@+id/elem_106" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Sg" />
+                <ImageView android:id="@+id/elem_107" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"       android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Bh" />
+                <ImageView android:id="@+id/elem_108" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"       android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Hs" />
+                <ImageView android:id="@+id/elem_109" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Mt" />
+                <ImageView android:id="@+id/elem_110" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"  android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Ds" />
+                <ImageView android:id="@+id/elem_111" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"   android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Rg" />
+                <ImageView android:id="@+id/elem_112" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"   android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Cn" />
+                <ImageView android:id="@+id/elem_113" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"      android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Nh" />
+                <ImageView android:id="@+id/elem_114" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"     android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Fl" />
+                <ImageView android:id="@+id/elem_115" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"     android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Mc" />
+                <ImageView android:id="@+id/elem_116" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"   android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Lv" />
+                <ImageView android:id="@+id/elem_117" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Ts" />
+                <ImageView android:id="@+id/elem_118" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"     android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Og" />
+            </LinearLayout>
+
+            <!-- Spacer row -->
+            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="0.5" />
+
+            <!-- Lanthanide row: La..Lu (57-71) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <!-- Offset by 2 columns (like real periodic table) -->
+                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="2" />
+                <ImageView android:id="@+id/elem_57"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"     android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="La" />
+                <ImageView android:id="@+id/elem_58"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"        android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Ce" />
+                <ImageView android:id="@+id/elem_59"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"  android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Pr" />
+                <ImageView android:id="@+id/elem_60"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"     android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Nd" />
+                <ImageView android:id="@+id/elem_61"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Pm" />
+                <ImageView android:id="@+id/elem_62"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"      android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Sm" />
+                <ImageView android:id="@+id/elem_63"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"      android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Eu" />
+                <ImageView android:id="@+id/elem_64"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Gd" />
+                <ImageView android:id="@+id/elem_65"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"       android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Tb" />
+                <ImageView android:id="@+id/elem_66"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Dy" />
+                <ImageView android:id="@+id/elem_67"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"       android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Ho" />
+                <ImageView android:id="@+id/elem_68"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"        android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Er" />
+                <ImageView android:id="@+id/elem_69"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"       android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Tm" />
+                <ImageView android:id="@+id/elem_70"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"     android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Yb" />
+                <ImageView android:id="@+id/elem_71"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"      android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Lu" />
+                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" />
+            </LinearLayout>
+
+            <!-- Actinide row: Ac..Lr (89-103) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="2" />
+                <ImageView android:id="@+id/elem_89"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"     android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Ac" />
+                <ImageView android:id="@+id/elem_90"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"      android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Th" />
+                <ImageView android:id="@+id/elem_91"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Pa" />
+                <ImageView android:id="@+id/elem_92"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"      android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="U" />
+                <ImageView android:id="@+id/elem_93"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Np" />
+                <ImageView android:id="@+id/elem_94"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Pu" />
+                <ImageView android:id="@+id/elem_95"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Am" />
+                <ImageView android:id="@+id/elem_96"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"       android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Cm" />
+                <ImageView android:id="@+id/elem_97"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Bk" />
+                <ImageView android:id="@+id/elem_98"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"  android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Cf" />
+                <ImageView android:id="@+id/elem_99"  android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"  android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Es" />
+                <ImageView android:id="@+id/elem_100" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"       android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Fm" />
+                <ImageView android:id="@+id/elem_101" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"   android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Md" />
+                <ImageView android:id="@+id/elem_102" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"      android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="No" />
+                <ImageView android:id="@+id/elem_103" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"    android:scaleType="fitCenter" android:padding="1dp" android:contentDescription="Lr" />
+                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.example.myapplication.ZoomableScrollView>
+
+    <!-- Back button â€” declared after ZoomableScrollView to sit on top (Z-order) -->
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_gravity="top|start"
+        android:layout_margin="8dp"
+        android:background="@drawable/button_back"
+        android:contentDescription="Back"
+        android:scaleType="fitXY"
+        android:elevation="8dp" />
+
+    <!-- Title -->
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/title_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Please rotate the screen"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</android.support.constraint.ConstraintLayout>
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="14dp"
+        android:text="@string/periodic_table_title"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="3"
+        android:elevation="8dp" />
+
+    <!-- Zoom hint -->
+    <TextView
+        android:id="@+id/zoom_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="8dp"
+        android:text="Pinch to zoom"
+        android:textColor="#CCFFFFFF"
+        android:textSize="11sp"
+        android:elevation="8dp" />
+
+</FrameLayout>
+

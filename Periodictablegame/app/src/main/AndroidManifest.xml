@@ -2,18 +2,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" > <!-- No Bar -->
-        <activity android:name=".Level_3_GuessPicture" />
-        <activity android:name=".Level_2_GuessPicture" />
-        <activity android:name=".Level_1_GuessPicture" />
-        <activity android:name=".LevelGuessPicture" />
-        <activity android:name=".Game" />
-        <activity android:name=".PeriodicTable" />
+        <activity android:name=".Level_3_GuessPicture" android:exported="false" />
+        <activity android:name=".Level_2_GuessPicture" android:exported="false" />
+        <activity android:name=".Level_1_GuessPicture" android:exported="false" />
+        <activity android:name=".LevelGuessPicture" android:exported="false" />
+        <activity android:name=".Game" android:exported="false" />
+        <activity android:name=".PeriodicTable"
+            android:screenOrientation="landscape"
+            android:exported="false" />
         <activity android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

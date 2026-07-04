@@ -1,70 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_gravity="center_horizontal"
-    android:background="@drawable/background"
-    tools:context=".Level_1_GuessPicture" >
+    android:background="@drawable/background">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_alignParentTop="true"
-        android:layout_gravity="center_horizontal"
+    <!-- Top bar: back | hearts | score -->
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btnSubmit" >
+        android:layout_height="68dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="8dp">
 
         <Button
             android:id="@+id/back_gameButton"
-            android:layout_width="81dp"
+            android:layout_width="72dp"
             android:layout_height="56dp"
-            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
             android:background="@drawable/button_back" />
 
-        <ImageView
-            android:id="@+id/imgVIIIA"
-            android:layout_width="match_parent"
-            android:layout_height="200dp" />
+        <!-- Hearts centered -->
+        <TextView
+            android:id="@+id/tvHearts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="❤️❤️❤️"
+            android:textSize="26sp"
+            android:background="@drawable/heart_badge"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp" />
 
-        <GridView
-            android:id="@+id/gridViewAnswer"
-            android:layout_margin="20dp"
-            android:padding="10dp"
-            android:horizontalSpacing="10dp"
-            android:verticalSpacing="10dp"
-            android:columnWidth="40dp"
-            android:numColumns="auto_fit"
-            android:scrollbars="none"
-            android:stretchMode="columnWidth"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        <!-- Score badge on right -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal"
+            android:background="@drawable/score_badge"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:gravity="center_vertical">
 
-        <GridView
-            android:id="@+id/gridViewSuggest"
-            android:layout_margin="10dp"
-            android:padding="4dp"
-            android:horizontalSpacing="10dp"
-            android:verticalSpacing="10dp"
-            android:columnWidth="40dp"
-            android:numColumns="auto_fit"
-            android:scrollbars="none"
-            android:stretchMode="columnWidth"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⭐ "
+                android:textSize="16sp" />
 
-    <Button
-        android:id="@+id/btnSubmit"
+            <TextView
+                android:id="@+id/tvScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Element image -->
+    <ImageView
+        android:id="@+id/imgVIIIA"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/button"
-        android:text="Submit" />
+        android:layout_height="165dp"
+        android:scaleType="centerInside" />
 
-</RelativeLayout>
+    <!-- Answer slots -->
+    <GridView
+        android:id="@+id/gridViewAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="6dp"
+        android:horizontalSpacing="6dp"
+        android:verticalSpacing="6dp"
+        android:numColumns="auto_fit"
+        android:columnWidth="54dp"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth" />
 
+    <!-- Undo hint -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="แตะตัวอักษรในช่องคำตอบเพื่อลบออก"
+        android:textColor="#AAFFFFFF"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" />
 
+    <!-- Suggest letters -->
+    <GridView
+        android:id="@+id/gridViewSuggest"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:horizontalSpacing="8dp"
+        android:verticalSpacing="8dp"
+        android:numColumns="auto_fit"
+        android:columnWidth="60dp"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth" />
 
+</LinearLayout>

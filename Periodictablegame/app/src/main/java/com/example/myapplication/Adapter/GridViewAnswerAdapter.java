@@ -10,43 +10,42 @@ import android.widget.GridView;
 
 public class GridViewAnswerAdapter extends BaseAdapter {
 
-    protected char[] answerCharacter;
-    protected Context context;
+    public interface SlotClickListener {
+        void onSlotClicked(int position);
+    }
 
-    public GridViewAnswerAdapter(char[] answerCharacter, Context context) {
-        this.answerCharacter = answerCharacter;
+    private final char[] slots;
+    private final Context context;
+
+    public GridViewAnswerAdapter(char[] slots, Context context) {
+        this.slots = slots;
         this.context = context;
     }
 
-    @Override
-    public int getCount() {
-        return answerCharacter.length;
-    }
-
-    @Override
-    public Object getItem(int position) {
-        return answerCharacter[position];
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return position;
-    }
+    @Override public int getCount() { return slots.length; }
+    @Override public Object getItem(int pos) { return slots[pos]; }
+    @Override public long getItemId(int pos) { return pos; }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Button button;
-        if (convertView == null) {
-            button = new Button(context);
-            button.setLayoutParams(new GridView.LayoutParams(85, 85));
-            button.setPadding(8, 8, 8, 8);
-            button.setBackgroundColor(Color.DKGRAY);
-            button.setTextColor(Color.YELLOW);
-            button.setText(String.valueOf(answerCharacter[position]));
+        Button btn = (convertView instanceof Button) ? (Button) convertView : new Button(context);
+        btn.setLayoutParams(new GridView.LayoutParams(GridView.LayoutParams.MATCH_PARENT, 110));
+        btn.setPadding(2, 2, 2, 2);
+        btn.setTextSize(16f);
+        // Disable per-button click so GridView.setOnItemClickListener handles all positions
+        btn.setClickable(false);
+        btn.setFocusable(false);
+
+        char c = slots[position];
+        if (c == ' ') {
+            btn.setText("_");
+            btn.setBackgroundColor(0xFF455A64);
+            btn.setTextColor(0xFF78909C);
+        } else {
+            btn.setText(String.valueOf(Character.toUpperCase(c)));
+            btn.setBackgroundColor(0xFF2E7D32);
+            btn.setTextColor(Color.WHITE);
         }
-        else {
-            button = (Button) convertView;
-        }
-        return button;
+        return btn;
     }
 }
